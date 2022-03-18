@@ -1,0 +1,154 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: var(--main-text-color);
+}
+
+:root{
+    --main-bg-color:rgb(231, 201, 201);
+    --main-text-color:rgb(112, 112, 117);
+    --header-bg-color:black;
+    --header-text-color:white;
+}
+
+body{
+    background-color: var(--main-bg-color);
+}
+
+h1{
+    font-size: 2.5rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:var(--header-text-color);
+}
+
+h2{
+    font-size: 3rem;
+}
+
+h3{
+    font-size: 2rem;
+    margin: 2rem;
+}
+
+p{
+    font-size:1.3rem;
+    line-height: 1.5em;
+    text-align: justify;
+    margin-bottom: 1em;
+    margin-right: 50px;
+}
+
+header{
+    background-color: var(--header-bg-color);
+    display: flex;
+    padding: 20px 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header>nav>ul{
+    display: flex;
+}
+
+header li{
+    margin-left: 5em;
+
+}
+
+
+
+.nav-links{
+    text-decoration: none;
+    color:var(--header-text-color);
+    font-size: 1.2em;
+}
+
+
+#hero{
+    width: 100%;
+    background-image: url(/assets/images/Eniac.jpg);
+    height: 500px;
+    background-size: cover;
+    background-position-y: 60%;
+    box-shadow: 0 0 100px 100px black inset;
+}
+
+section{
+    display: flex;
+    margin: 40px;
+}
+
+aside{
+    width: 20vw;
+}
+
+#greetings{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+#face{
+    width: 20%;
+}
+
+section>article,#projects-section{
+    width: 70vw;
+    text-align: center;
+}
+
+#projects-section{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.project-tile{
+    width: 50%;
+    flex:1 1 400px;
+    position: relative;
+}
+
+.project-screenshot{
+    width: 100%;
+    height: 100%;
+}
+
+.project-tile>h3{
+    position: absolute;
+    background-color: white;
+    padding: 20px 40px;
+}
+
+@media screen and (max-width:992px) {
+    body{
+        background-color: red;
+    }
+    header{
+        flex-direction: column;
+    }
+    main>section{
+        flex-direction: column;
+    }
+    aside{
+        width:auto;
+        text-align: center;
+    }
+    article,#projects-section{
+        width: auto !important;
+    }
+    h2{
+        margin-bottom: 1em;
+    }
+}
+
+@media screen and (max-width:768px) {
+    body{
+        background-color: blue;
+    }
+    header>nav>ul{
+        flex-direction: column;
+    }
+    
+}
