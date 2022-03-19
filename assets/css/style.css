@@ -115,11 +115,20 @@ justify-content: center;
 
 .project-tile{
     width: 50%;
-    flex:1 1 400px;
+    flex:1 1 300px;
     position: relative;
     margin:10px;
     box-shadow: 0 0 10px 10px black;
+    display: inline-block;
+    
 } 
+
+/* made first image larger than others in larger display */
+
+.project-tile:first-child{
+    width: 100%;
+    flex: none;
+}
 
 .project-tile::after{
     content: "";
