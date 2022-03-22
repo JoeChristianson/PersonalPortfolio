@@ -13,6 +13,7 @@
     --project-tile-overlay: rgb(161 161 193 / 50%);
     --hero-text-background-color: rgba(0, 0, 0, 0.596);
     --project-tile-box-shadow-color: black;
+    --accent-color:rgb(199, 192, 144);
 }
 
 body{
@@ -94,9 +95,10 @@ nav li:hover{
     height: 500px;
     background-size: cover;
     background-position-y: 60%;
-    box-shadow: 0 0 50px 50px var(--main-bg-color) inset;
+    box-shadow: 1px 1px 50px 50px var(--main-bg-color) inset;
     display: flex;
-    border: 5px solid black;
+    border: solid var(--accent-color);
+    border-width: 5px 0px;
 }
 
 #hero h1{
@@ -129,7 +131,7 @@ aside::after{
     position: absolute;
     width: 10px;
     height: 100px;
-    background-color: black;
+    background-color: var(--accent-color);;
     right: 0;
     top:20px;
 }
@@ -250,35 +252,40 @@ input[type="submit"]{
 /* children become centered in header, project tile's flex box flows vertically */
 
 @media screen and (max-width:992px) {
-    h1{
-        text-align: center;
-    }
     header{
         flex-direction: column;
     }
-     
+    
     header nav{
         margin-top: 30px;
     }
-
+    
     header ul{
         justify-content: space-evenly;
     }
+    
+    #hero h1{
+        text-align: center;
+        font-size: 3rem;
 
+    }
     main>section{
         flex-direction: column;
     }
     aside{
         width:auto;
         text-align: center;
+        padding-top: 30px;
     }
     aside::after{
         content: "";
         position: absolute;
-        width: 10px;
-        height: 100px;
-        background-color: black;
+        width: 300px;
+        height: 10px;
+        background-color: var(--accent-color);
         bottom:0px;
+        left:50%;
+        transform: translateX(-50%);
         top:auto;
     }
     article,#projects-section{
@@ -305,10 +312,11 @@ input[type="submit"]{
 
     header nav {
         margin-top: 0;
+        width: 100%;
     }
 
     nav li{
-        margin: 1em 0;
+        margin: 0;
     }
 
     header>nav>ul{
