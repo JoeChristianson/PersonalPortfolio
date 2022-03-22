@@ -2,7 +2,7 @@
 
 ## Summary
 
-This app is a personal coding portfolio for Joe Christianson. It has sections for about-me,projects, and a contact form. 
+This app is a personal coding portfolio for Joe Christianson. It has sections for about-me, projects, and a contact form. 
 
 ## Details
 

@@ -5,10 +5,14 @@
 }
 
 :root{
-    --main-bg-color:rgb(231, 201, 201);
-    --main-text-color:rgb(112, 112, 117);
-    --header-bg-color:rgb(121, 103, 103);
-    --header-text-color:white;
+    --main-bg-color: hsl(240, 31%, 97%);
+    --main-text-color: rgb(57, 57, 61);
+    --hero-text-color: white;
+    --nav-hover-bg-color: rgb(219, 219, 236);
+    --aside-bg-color: hsl(240, 31%, 94%);
+    --project-tile-overlay: rgb(161 161 193 / 50%);
+    --hero-text-background-color: rgba(0, 0, 0, 0.596);
+    --project-tile-box-shadow-color: black;
 }
 
 body{
@@ -20,7 +24,6 @@ body{
 h1{
     font-size: 2.5rem;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color:var(--header-text-color);
 }
 
 h2{
@@ -37,15 +40,13 @@ p{
     line-height: 1.5em;
     text-align: justify;
     margin-bottom: 1em;
-    margin-right: 50px;
 }
 
 header{
-    background-color: var(--header-bg-color);
     display: flex;
-    padding: 20px 30px;
     justify-content: space-between;
     align-items: center;
+
 }
 
 header>#social-links>ul{
@@ -70,10 +71,20 @@ header>nav>ul{
     text-align: center;
 }
 
+
 .nav-links{
     text-decoration: none;
-    color:var(--header-text-color);
+    color:var(--main-text-color);
     font-size: 1.2em;
+}
+
+nav li{
+    padding:2em;
+}
+
+nav li:hover{
+    background-color: var(--nav-hover-bg-color);
+    
 }
 
 
@@ -83,49 +94,77 @@ header>nav>ul{
     height: 500px;
     background-size: cover;
     background-position-y: 60%;
-    box-shadow: 0 0 100px 100px black inset;
+    box-shadow: 0 0 50px 50px var(--main-bg-color) inset;
     display: flex;
+    border: 5px solid black;
 }
 
 #hero h1{
-    color: rgb(147, 133, 187);
-    font-size: 10rem;
+    font-size: 4rem;
     text-align: center;
     margin: auto;
-    background-color: rgba(0, 0, 0, 0.596);
+    background-color: var(--hero-text-background-color);
+    padding: 1em;
+    width: 100%;
+    color:var(--hero-text-color);
 }
 
 section{
     display: flex;
-    margin: 40px;
 }
 
 /* Aside, at the moment only contains the section headings */
 
 aside{
     width: 20vw;
+    padding-top:20px;
+    background-color: var(--aside-bg-color);
+    text-align: center;
+    padding-right: 10px;
+    position: relative;
 }
+
+aside::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 100px;
+    background-color: black;
+    right: 0;
+    top:20px;
+}
+
+
 
 #greetings{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     margin-bottom: 50px;
+    
 }
 
 #face{
     width: 20%;
 }
 
+#greetings>h3{
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    font-size: 3em;
+}
+
 section>article,#projects-section{
-    width: 70vw;
+    width: 80vw;
     text-align: center;
+    padding: 35px 50px;
 }
 
 #projects-section{
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
+margin: 0;
 }
 
 .project-tile{
@@ -133,7 +172,7 @@ justify-content: center;
     flex:1 1 400px;
     position: relative;
     margin:10px;
-    box-shadow: 0 0 10px 10px black;
+    box-shadow: 0 0 10px 10px var(--project-tile-box-shadow-color);
     display: inline-block;  
 } 
 
@@ -152,7 +191,7 @@ justify-content: center;
     left:0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.233);
+    background-color: var(--project-tile-overlay);
 }
 
 .project-tile:hover::after{
@@ -167,8 +206,45 @@ justify-content: center;
 
 .project-tile>h3{
     position: absolute;
-    background-color: white;
+    background-color: var(--main-bg-color);
     padding: 20px 40px;
+    margin: 0;
+    border: 3px dashed black;
+    bottom: 0;
+}
+
+form{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    row-gap: 1em;
+    align-items: center;
+    font-size: 2em;
+}
+
+form label {
+    text-align: right;
+    padding-right: 20px;
+}
+
+form input,textarea{
+    padding: 0.5em 0px;
+    font-size: 1.3rem;
+}
+
+input[type="text"],input[type="email"],textarea{
+    width: 600px;
+}
+
+textarea{
+    height: 300px;
+}
+
+input[type="submit"]{
+    padding: .5em 2em;
+    grid-column: 1/3;
+    margin: auto;
+    background-color: var(--aside-bg-color);
+
 }
 
 /* children become centered in header, project tile's flex box flows vertically */
@@ -176,10 +252,6 @@ justify-content: center;
 @media screen and (max-width:992px) {
     h1{
         text-align: center;
-    }
-
-    body{
-        background-color: red;
     }
     header{
         flex-direction: column;
@@ -200,19 +272,33 @@ justify-content: center;
         width:auto;
         text-align: center;
     }
+    aside::after{
+        content: "";
+        position: absolute;
+        width: 10px;
+        height: 100px;
+        background-color: black;
+        bottom:0px;
+        top:auto;
+    }
     article,#projects-section{
         width: auto !important;
     }
     h2{
         margin-bottom: 1em;
     }
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+    input[type="text"],input[type="email"],textarea{
+        max-width: 80%;
+    }
 }
 
-@media screen and (max-width:768px) {
-    body{
-        background-color: blue;
-    }
 
+
+@media screen and (max-width:768px) {
     header{
         padding: 20px 0 0 0;
     }
