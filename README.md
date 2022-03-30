@@ -18,4 +18,4 @@ This app is a personal coding portfolio for Joe Christianson. It has sections fo
 
 ## Live Site
 
-https://https://joechristianson.github.io/PersonalPortfolio/
+https://joechristianson.github.io/PersonalPortfolio/
