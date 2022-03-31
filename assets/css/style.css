@@ -181,6 +181,9 @@ margin: 0;
     display: inline-block;  
 } 
 
+.project-tile>img{
+    width: 100%;
+}
 /* made first image larger than others in larger display */
 
 .project-tile:first-child{
