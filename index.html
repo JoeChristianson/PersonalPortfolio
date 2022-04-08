@@ -1,91 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Joe Christianson - Web Developer</title>
     <script
-  src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-  crossorigin="anonymous"></script>
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
     <script src="./assets/scripts/pullProjects.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div id="social-links">
-            <ul id="social-links-list">
-                <!-- These do not link to my profiles at the moment, any other ones to add? -->
-                <li><a href="https://linkedin.com"><img src="./assets/images/linked-in-logo.png"></a></li>
-                <li><a href="https://github.com"><img src="./assets/images/git-hub-logo.png"></a></li>
-            </ul>
-        </div>
-        <nav>
-            <ul>
-                <li><a class="nav-links" href="#about-me">About Me</a></li>
-                <li><a class="nav-links" href="#projects">Projects</a></li>
-                <li><a class="nav-links" href="#contact">Contact</a></li>
-            </ul>      
-        </nav>
+      <div id="social-links">
+        <ul id="social-links-list">
+          <!-- These do not link to my profiles at the moment, any other ones to add? -->
+          <li>
+            <a href="https://www.linkedin.com/in/joseph-christianson-b627a113/"
+              ><img src="./assets/images/linked-in-logo.png"
+            /></a>
+          </li>
+          <li>
+            <a href="https://github.com/JoeChristianson"
+              ><img src="./assets/images/git-hub-logo.png"
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <nav>
+        <ul>
+          <li><a class="nav-links" href="#about-me">About Me</a></li>
+          <li><a class="nav-links" href="#projects">Projects</a></li>
+          <li><a class="nav-links" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
     <!-- this hero has a background image -->
     <div id="hero">
-        <h1>Joe Christianson - Developer</h1>
+      <h1>Joe Christianson - Developer</h1>
     </div>
     <main>
-        <section id="about-me">
-            <!-- asides only have titles within them and will move to above their respective content with smaller screens -->
-            <aside>
-                <h2>About Me</h2>
-            </aside>
-            <article>
-                <div id="greetings">
-                    <!-- png with no fill, works with light colored backgrounds, may add white stroke alternate -->
-                    <img id="face" alt="sketch of Joe's face" src="./assets/images/Profile.png">
-                    <h3>Hello!</h3>
-                </div>
-                <!-- Need to fill this out. What type of information are they looking for here? -->
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae consectetur voluptas praesentium cum beatae doloremque, unde nostrum ipsam esse odio temporibus illo nam magni aliquam inventore iure doloribus aut non.
-                    Temporibus commodi voluptates corrupti praesentium, nesciunt vel porro excepturi recusandae hic ducimus id quos illo, eius quasi quo eveniet quas nobis nemo consectetur placeat nulla dolor adipisci alias suscipit. Ab?
-                    Tempora molestiae recusandae amet sit inventore repellat perspiciatis quae. Aliquam non aliquid officia veniam deleniti sapiente libero amet. Itaque dolore accusantium sunt quisquam voluptas ea officia temporibus facilis iure blanditiis!
-                </p>  
-                <p>Soluta porro dignissimos ab autem qui omnis? Debitis temporibus rerum excepturi! Tempore ut optio est magnam nesciunt molestiae temporibus repudiandae ab nostrum, voluptas aperiam officiis voluptatibus consectetur dicta a eligendi!
-                    Sint aliquid qui eveniet, autem magni nesciunt cupiditate ex nostrum recusandae quam iure esse accusantium. Voluptates ea tempora rerum accusamus impedit. Enim eligendi ipsam tempora odio, reprehenderit ad porro esse!</p>             
-                </article>
-            </section>
-            <section id="projects">
-                <aside>
-                    <h2>Projects</h2>
-                </aside>
-                <!-- These are all placeholders as of now. There needs to be more styling on these tiles. first tile should be bigger, need to figure that out -->
-                <section id="projects-section">
-                    <!-- maybe could put an overlay on these that decreases opacity on hover -->
-
-                </section>
-            </section>
-            <section id="contact">
-                <aside>
-                    <h2>Contact</h2>
-                </aside>
-                <article>
-                    <!-- formatted with grid, goes from two columns to one on downsizing -->
-                    <form action="">
-                        <label for="first">First</label>
-                        <input type="text" id="first" placeholder="First"/>
-                        <label for="last">Last</label>
-                        <input type="text" id="last" placeholder="Last"/>
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" placeholder="E-mail"/>
-                        <label for="message">Message</label>
-                        <textarea id="message" placeholder="Message"></textarea>
-                        <input type="submit" value="Send">
-                    </form>               
-                </article>
-            </section>
-        </main>
-        <!-- should we add a footer? -->
-    </body>
-    </html>
-
+      <section id="about-me">
+        <!-- asides only have titles within them and will move to above their respective content with smaller screens -->
+        <aside>
+          <h2>About Me</h2>
+        </aside>
+        <article>
+          <div id="greetings">
+            <!-- png with no fill, works with light colored backgrounds, may add white stroke alternate -->
+            <img
+              id="face"
+              alt="sketch of Joe's face"
+              src="./assets/images/Profile.png"
+            />
+            <h3>Hello!</h3>
+          </div>
+          <!-- Need to fill this out. What type of information are they looking for here? -->
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae
+            consectetur voluptas praesentium cum beatae doloremque, unde nostrum
+            ipsam esse odio temporibus illo nam magni aliquam inventore iure
+            doloribus aut non. Temporibus commodi voluptates corrupti
+            praesentium, nesciunt vel porro excepturi recusandae hic ducimus id
+            quos illo, eius quasi quo eveniet quas nobis nemo consectetur
+            placeat nulla dolor adipisci alias suscipit. Ab? Tempora molestiae
+            recusandae amet sit inventore repellat perspiciatis quae. Aliquam
+            non aliquid officia veniam deleniti sapiente libero amet. Itaque
+            dolore accusantium sunt quisquam voluptas ea officia temporibus
+            facilis iure blanditiis!
+          </p>
+          <p>
+            Soluta porro dignissimos ab autem qui omnis? Debitis temporibus
+            rerum excepturi! Tempore ut optio est magnam nesciunt molestiae
+            temporibus repudiandae ab nostrum, voluptas aperiam officiis
+            voluptatibus consectetur dicta a eligendi! Sint aliquid qui eveniet,
+            autem magni nesciunt cupiditate ex nostrum recusandae quam iure esse
+            accusantium. Voluptates ea tempora rerum accusamus impedit. Enim
+            eligendi ipsam tempora odio, reprehenderit ad porro esse!
+          </p>
+        </article>
+      </section>
+      <section id="projects">
+        <aside>
+          <h2>Projects</h2>
+        </aside>
+        <!-- These are all placeholders as of now. There needs to be more styling on these tiles. first tile should be bigger, need to figure that out -->
+        <section id="projects-section">
+          <!-- maybe could put an overlay on these that decreases opacity on hover -->
+        </section>
+      </section>
+      <section id="contact">
+        <aside>
+          <h2>Contact</h2>
+        </aside>
+        <article>
+          <!-- formatted with grid, goes from two columns to one on downsizing -->
+          <form action="">
+            <label for="first">First</label>
+            <input type="text" id="first" placeholder="First" />
+            <label for="last">Last</label>
+            <input type="text" id="last" placeholder="Last" />
+            <label for="email">E-mail</label>
+            <input type="email" id="email" placeholder="E-mail" />
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Message"></textarea>
+            <input type="submit" value="Send" />
+          </form>
+        </article>
+      </section>
+    </main>
+    <footer>
+      <div>Phone:</div>
+      <div>701-318-4338</div>
+      <div>E-mail:</div>
+      <div>
+        <a href="mailto:joechristiansonwebdev@gmail.com?"
+          >joechristiansonwebdev@gmail.com</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>

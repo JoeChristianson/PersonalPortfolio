@@ -255,11 +255,27 @@ input[type="submit"]{
     background-color: var(--aside-bg-color);
 }
 
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--hero-text-background-color);
+}
+
+footer div,footer a{
+    color: var(--hero-text-color);
+    font-size: 1.5rem;
+    padding: 1em;
+    align-items: center;
+    text-align: center;
+}
+
 /* children become centered in header, project tile's flex box flows vertically */
 
 @media screen and (max-width:992px) {
     header{
         flex-direction: column;
+        
+
     }
     
     header nav{
@@ -311,6 +327,12 @@ input[type="submit"]{
     /* width changes so it does not overflow the container */
     input[type="text"],input[type="email"],textarea{
         max-width: 80%;
+    }
+    footer{
+        flex-direction: column;
+    }
+    footer div,footer a{
+        padding: .3em;
     }
 }
 
