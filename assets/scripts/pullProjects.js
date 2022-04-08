@@ -25,7 +25,7 @@ const pull = async (url)=>{
 }
 
 
-async function loadProjects(){
+async function loadOwnProjects(){
     const projects = await pull(url);
     for(let project of projects){
         console.log(project);
@@ -47,7 +47,7 @@ async function loadProjects(){
         })
     }
 }
-loadProjects()
+loadOwnProjects()
 
 
 // `<div class="project-tile" onclick="window.location.href='https://www.ponggame.org'">
@@ -55,3 +55,8 @@ loadProjects()
 // <img class="project-screenshot" src="https://i.guim.co.uk/img/static/sys-images/Technology/Pix/pictures/2008/04/16/Pong460x276.jpg?width=465&quality=45&auto=format&fit=max&dpr=2&s=29de82b73dca1aba1d923bd736d288a1">
 // <div class="project-tile-overlay"></div>
 // </div>`
+
+document.querySelector("#custom-project").addEventListener("click",e=>{
+    window.location.href = e.target.dataset.link;
+}
+)

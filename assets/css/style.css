@@ -10,7 +10,7 @@
     --hero-text-color: white;
     --nav-hover-bg-color: rgb(219, 219, 236);
     --aside-bg-color: hsl(240, 31%, 94%);
-    --project-tile-overlay: rgb(161 161 193 / 50%);
+    --project-tile-overlay: rgba(161, 161, 193, 0.24);
     --hero-text-background-color: rgba(0, 0, 0, 0.596);
     --project-tile-box-shadow-color: black;
     --accent-color:rgb(199, 192, 144);
@@ -61,10 +61,7 @@ header img{
     margin-left: 40px;
 }
 
-/* will expand to 100% width when doc flow changes in ul */
-nav{
-    width:400px;
-}
+
 
 header>nav>ul{
     display: flex;
