@@ -8,6 +8,7 @@ class Project{
         this.image=null;
         this.codeURL=obj.html_url;
         this.siteURL=`https://joechristianson.github.io/${obj.name}/`;
+        this.codeURL=`https://github.com/JoeChristianson/${obj.name}`;
         this.screenshot = `${this.siteURL}screenshot.png`;
         if (this.description?.includes("*P*")) projects.push(this);
     }
@@ -28,7 +29,6 @@ const pull = async (url)=>{
 async function loadOwnProjects(){
     const projects = await pull(url);
     for(let project of projects){
-        console.log(project);
         const tile = $("<div>");
         tile.addClass("project-tile");
         tile.on("click",()=>{
@@ -41,7 +41,13 @@ async function loadOwnProjects(){
         const overlay = $("<div>");
         overlay.addClass("project-tile-overlay");
         projSect.append(tile);
-        [title,img,overlay].forEach(el=>{
+        const codeLinkCont = $("<div>");
+        const codeLink = $("<a>")
+        codeLinkCont.addClass("code-link");
+        codeLink.text("CODE");
+        codeLink.attr("href",project.codeURL)
+        codeLinkCont.append(codeLink);
+        [title,img,overlay,codeLinkCont].forEach(el=>{
             tile.append(el);
             console.log(tile)
         })

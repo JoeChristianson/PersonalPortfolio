@@ -5,15 +5,15 @@
 }
 
 :root{
-    --main-bg-color: hsl(240, 31%, 97%);
-    --main-text-color: rgb(57, 57, 61);
-    --hero-text-color: white;
+    --main-bg-color: #F7F9fb;
+    --main-text-color: #687864;
+    --hero-text-color: #e0faf1;
     --nav-hover-bg-color: rgb(219, 219, 236);
     --aside-bg-color: hsl(240, 31%, 94%);
-    --project-tile-overlay: rgba(161, 161, 193, 0.24);
-    --hero-text-background-color: rgba(0, 0, 0, 0.596);
-    --project-tile-box-shadow-color: black;
-    --accent-color:rgb(199, 192, 144);
+    --project-tile-overlay: #6878642e;
+    --hero-text-background-color: #31718ec5;
+    --project-tile-box-shadow-color: #687864;
+    --accent-color:#5085A5;
 }
 
 body{
@@ -22,10 +22,6 @@ body{
 
 /* reset.css removed all font size from headings, so they must be specified in this file */
 
-h1{
-    font-size: 2.5rem;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
 
 h2{
     font-size: 3rem;
@@ -88,25 +84,33 @@ nav li:hover{
 /* Should find a more aesthetically-pleasing picture */
 
 #hero{
+    position: relative;
+    /* --base-font:4rem; */
+    --base-font:4vw;
+}
+
+#hero>img{
     width: 100%;
-    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Eniac.jpg/1280px-Eniac.jpg);
-    height: 500px;
-    background-size: cover;
-    background-position-y: 60%;
-    box-shadow: 1px 1px 50px 50px var(--main-bg-color) inset;
-    display: flex;
-    border: solid var(--accent-color);
-    border-width: 5px 0px;
 }
 
 #hero h1{
-    font-size: 4rem;
-    text-align: center;
-    margin: auto;
-    background-color: var(--hero-text-background-color);
-    padding: 1em;
-    width: 100%;
+    font-size: 5vw;
+    top:20%;
+    left:5%;
+    width: 5%;
     color:var(--hero-text-color);
+    position: absolute;
+    font-family: 'Righteous',cursive;
+    letter-spacing: 5px;
+}
+
+#hero h2{
+    font-size: 4.5vw;
+    top:40%;
+    left:5%;
+    position: absolute;
+    font-family: monospace;
+    color: #e0faf1;
 }
 
 section{
@@ -189,6 +193,16 @@ margin: 0;
     margin: 10px 20px;
 }
 
+.code-link{
+    font-size: 3vw;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 5;
+    padding: 10px;
+    background: white;
+}
+
 /* This is the overlay that becomes invisible on hover */
 .project-tile::after{
     content: "";
@@ -213,7 +227,8 @@ margin: 0;
 .project-tile>h3{
     position: absolute;
     background-color: var(--main-bg-color);
-    padding: 20px 40px;
+    font-size: 4vw;
+    padding: 5px;
     margin: 0;
     border: 3px dashed black;
     bottom: 0;
@@ -276,6 +291,10 @@ footer div,footer a{
     }
     
     header nav{
+        margin-top: 10px;
+    }
+
+    #social-links{
         margin-top: 30px;
     }
     
@@ -285,8 +304,6 @@ footer div,footer a{
     
     #hero h1{
         text-align: center;
-        font-size: 3rem;
-
     }
     main>section{
         flex-direction: column;
