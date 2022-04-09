@@ -19,3 +19,7 @@ This app is a personal coding portfolio for Joe Christianson. It has sections fo
 ## Live Site
 
 https://joechristianson.github.io/PersonalPortfolio/
+
+## License
+
+![](https://img.shields.io/badge/License-MIT-yellowgreen)
